@@ -1,0 +1,17 @@
+[
+  {
+    "email": "goku@earth.com",
+    "password": "9ffe57a4cb49b77d01d1ee7541bf27cdab831b2f57be2286ea2021fa6b496b62a63242bf6fb8aa4ad9a0135515a2f2385f04ab6ece0e1a1667e6ff018ab6df8d.d19fb910f53963c0",
+    "id": "e7439480"
+  },
+  {
+    "email": "dave@heman.com",
+    "password": "7c3ecf7bfd7837585cbc2c882927ebe452d22982b0e895b3ea947b8eb0949dced52282ead548bc6d5b75a63805f3e3d98ebacc74226e62fe7887fac554abd971.f6330d8d687a3c93",
+    "id": "1130a15b"
+  },
+  {
+    "email": "test@test.com",
+    "password": "2dd7032128e85344f695ec7b228e7f143e6cc4e7dbaae7cd5223ce99483f94da1f6812b9d50aa8b29eb652adbf554270d98d048891d6ee517764e914e89c3751.930a3992079dd474",
+    "id": "72519abd"
+  }
+]

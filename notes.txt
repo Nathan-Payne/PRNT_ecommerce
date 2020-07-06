@@ -1,0 +1,34 @@
+
+//ERROR CHECKLIST - ensure values/statements are being returned in .filter() and .reduce() functions
+				  - read and write values to repo/db at start/end of route handlers
+				  - check there is a '/' at the start of route handlers	
+
+//COOKIES - essentially small encrypted strings of characters provided by websites for browsers to store
+//so site can recognise user in the future. Sent as part of users header file in requsets to server.
+
+//IMAGE STORAGE - file storage for this app will encode imgs in base64 and store in server, 
+//this is a bad way to store images for an ecommerce app however JS is focus of course for now  
+
+//MIDDLEWARE CONFLICTS - In the post requsets handler of new.js ensure middleware functions are in the correct
+//order and do not alter functionality of global middleware or their reesponses 
+
+
+
+
+//example of a middleware function for parsing a POST request, adds formData object to req.body
+const bodyParser = (req, res, next) => {
+	if (req.method === 'POST') {
+		req.on('data', (data) => {
+			const parsed = data.toString('utf8').split('&'); //returns array of each form element pair e.g. [password=ef98weh]
+			let formData = {};
+			for (let pair of parsed) {
+				const [ key, value ] = pair.split('='); // split returns array of username/value, destructures out and sets to the key and value of the object
+				formData[key] = value;
+			}
+			req.body = formData;
+			next(); //tells express logic is complete and can execute next middleware
+		});
+	} else {
+		next();
+	}
+};
