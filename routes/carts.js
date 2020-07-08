@@ -19,15 +19,18 @@ router.post('/cart/products', async (req, res) => {
 
 	const existingItem = cart.items.find((item) => item.id === req.body.productId);
 	if (existingItem) {
-		existingItem.quantity++;
+		existingItem.quantity = parseFloat(existingItem.quantity) + parseFloat(req.body.productQuantity);
 	} else {
-		cart.items.push({ id: req.body.productId, quantity: 1 });
+		cart.items.push({ id: req.body.productId, quantity: req.body.productQuantity || 1 });
 	}
 	await cartsRepo.update(cart.id, {
 		items: cart.items
 	});
 
-	res.redirect('/');
+	if (req.body.addCart) {
+		res.redirect(`/products/`);
+	}
+	res.redirect(`/cart`);
 });
 
 router.get('/cart', async (req, res) => {

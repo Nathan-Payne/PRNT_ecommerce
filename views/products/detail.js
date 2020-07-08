@@ -29,6 +29,7 @@ module.exports = ({ product }) => {
                     <form action="/cart/products" method="POST">
                         <div class="info-align">
                             <label for="quantity">Quantity
+                                    <input hidden value="${product.id}" name="productId" />
                                     <input id="quantity" type="text" name="productQuantity" value="1">
                             </label>
                             <div class="sharing">Sharing 
@@ -39,13 +40,12 @@ module.exports = ({ product }) => {
                             </div>
                         </div>
                         <div class="button-align">
-                            <button class="buy-button">ADD TO CART</button>
-                            <button class="buy-button buy-button-invert">BUY IT NOW</button>
+                            <button name="addCart" value="addCart" class="buy-button">ADD TO CART</button>
+                            <button name="buyNow" value="buyNow" class="buy-button buy-button-invert">BUY IT NOW</button>
                         </div>
                     </form>
                 </div>
             </section>
-
         `
 	});
 };
