@@ -45,27 +45,6 @@ module.exports = ({ content }) => {
     
     <hr>
 
-    <footer id="contact">
-        <div>
-            <ul class="contact-info">
-                <li>
-                    <a href=""><i class="fa fa-phone"></i>+1 555 987 6543</a>
-                </li>
-                <li>
-                    <a href=""><i class="fa fa-envelope"></i> shop@myshop.com</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <ul class="social">
-                <li><a href=""><i class="fab fa-facebook"></i></a></li>
-                <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                <li><a href=""><i class="fab fa-instagram"></i></a></li>
-            </ul>
-        </div>
-    </footer>
-    <hr>
 </body>
 
 </html>
