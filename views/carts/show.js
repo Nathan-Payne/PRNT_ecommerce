@@ -8,52 +8,51 @@ module.exports = ({ items }) => {
 	const renderedItems = items
 		.map((item) => {
 			return `
-        <div class="cart-item message">
-          <h3 class="subtitle">${item.product.title}</h3>
-          <div class="cart-right">
-            <div>
-              $${item.product.price}  X  ${item.quantity} = 
-            </div>
-            <div class="price is-size-4">
-              $${item.product.price * item.quantity}
-            </div>
-            <div class="remove">
-              <form method="POST" action="/cart/products/delete">
-                <input hidden value="${item.id}" name="itemId" />
-                <button class="button is-danger">                  
-                  <span class="icon is-small">
-                    <i class="fas fa-times"></i>
-                  </span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
+            <tr>
+                <td>${item.product.title}</td>
+                <td class="center-text">${item.quantity}</td>
+                <td class="center-text">£${item.product.price}</td>
+                <td class="center-text">
+                    <form method="POST" action="/cart/products/delete">
+                        <input hidden value="${item.id}" name="itemId" />
+                        <button class="btn-remove">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
       `;
 		})
 		.join('');
 
 	return layout({
 		content: `
-      <div id="cart" class="container">
-        <div class="columns">
-          <div class="column"></div>
-          <div class="column is-four-fifths">
-            <h3 class="subtitle"><b>Shopping Cart</b></h3>
-            <div>
-              ${renderedItems}
-            </div>
-            <div class="total message is-info">
-              <div class="message-header">
-                Total
-              </div>
-              <h1 class="title">$${totalPrice}</h1>
-              <button class="button is-primary">Buy</button>
-            </div>
+      <section id="cart-container">
+          <table>
+              <thead>
+                  <tr>
+                      <th>Item Name</th>
+                      <th>Quantity</th>
+                      <th>Price</th>
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                ${renderedItems}
+                <tr class="cart-total">
+                  <td></td>
+                  <td></td>
+                  <td>Total: </td>
+                  <td>£${totalPrice}</td>
+                </tr>
+              </tbody>
+          </table>
+
+          <div class="checkout">
+            <div class="btn-outline-tr">Checkout</div>
+            <div><a href="/products"><< Continue shopping</a></div>
           </div>
-          <div class="column"></div>
-        </div>
-      </div>
+      </section>
     `
 	});
 };
