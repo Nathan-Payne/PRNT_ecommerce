@@ -7,6 +7,7 @@ module.exports = ({ products }) => {
       <tr>
         <td>${product.title}</td>
         <td>${product.price}</td>
+        <td>${product.category}</td>
         <td>
           <a href="/admin/products/${product.id}/edit">
             <button class="button is-link">
@@ -35,6 +36,7 @@ module.exports = ({ products }) => {
           <tr>
             <th>Title</th>
             <th>Price</th>
+            <th>Category</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>

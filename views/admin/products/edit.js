@@ -20,6 +20,12 @@ module.exports = ({ product, errors }) => {
                         <input value="${product.price}" class="input" placeholder="Price" name="price">
                         <p class="help is-danger">${getError(errors, 'price')}</p>
                     </div>
+
+                    <div class="field">
+                        <label class="label">Category</label>
+                        <input value="${product.category}" class="input" placeholder="Category" name="category">
+                        <p class="help is-danger">${getError(errors, 'category')}</p>
+                    </div>
                     
                     <div class="field">
                         <label class="label">Image</label>            
