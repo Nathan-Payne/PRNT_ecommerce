@@ -30,7 +30,9 @@ module.exports = () => {
 
             <section id="about">
                 <h1>WHO WE ARE</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus netus auctor tempus etiam purus bibendum mauris quam.</p>
+                <p>We are an e-commerce platform for the print/wall art...... Lorem ipsum dolor sit amet, ris quam.</p>
+                <p>Stunning images beautifying your space.</p>
+                <p>Custom frame >> visit our sister site ........etc</p>
                 <button class="btn-outline-tr">JOIN THE MAILING LIST</button>
             </section>
 

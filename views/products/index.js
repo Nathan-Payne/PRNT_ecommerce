@@ -18,6 +18,16 @@ module.exports = ({ products }) => {
 	return layout({
 		content: `
         
+            <section id="feature-section-small">
+                <div class="feature-image-small"></div>
+                <div class="feature-title">
+                    <h5 class="hero-text hero-small">FREE CATALOG 2020</h5>
+                </div>
+                <a href="/products">
+                    <button class="btn-outline-tr feature-button-small">CLICK HERE</button>
+                </a>
+            </section>
+        
             <section class="banner">
                 <h6 class="text-small">
                     <a href="#" id="all">all</a> <span class="bold">|</span> 

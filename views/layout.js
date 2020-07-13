@@ -26,14 +26,14 @@ module.exports = ({ content }) => {
                         </div>
                     </label>
                     <ul class="nav-items">
-                        <li class="nav-item"><a href="/products">Products</a></li>
-                        <li class="nav-item"><a href="/products">Products</a></li>
-                        <li class="nav-item"><a href="/products">Products</a></li>
-                        <li class="nav-item"><a href="/products">Products</a></li>
-                        <li class="nav-item"><a href="/products">Products</a></li>
-                        <li class="nav-item"><a href="/products">Products</a></li>
-                        <li class="nav-item"><a href="/products">Products</a></li>
-                        <li class="nav-item"><a href="/products">Products</a></li>
+                        <li class="nav-item"><a href="/products">products</a></li>
+                        <li class="nav-item"><a href="/">contact us</a></li>
+                        <li class="nav-item"><a href="/cart">cart</a></li>
+                        <li class="nav-item"><a href="/products">nature</a></li>
+                        <li class="nav-item"><a href="/products">minimal</a></li>
+                        <li class="nav-item"><a href="/products">architectural</a></li>
+                        <li class="nav-item"><a href="/"><span>SALE ITEMS</span></a></li>
+                        <li class="nav-item"><a href="/"><span>NEW</span></a></li>
                     </ul>
                 </div>
 
