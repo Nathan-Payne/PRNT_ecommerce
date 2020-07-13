@@ -10,9 +10,9 @@ module.exports = ({ items }) => {
 			return `
             <tr>
                 <td>${item.product.title}</td>
-                <td class="center-text">${item.quantity}</td>
-                <td class="center-text">£${item.product.price}</td>
-                <td class="center-text">
+                <td>${item.quantity}</td>
+                <td>£${item.product.price}</td>
+                <td>
                     <form method="POST" action="/cart/products/delete">
                         <input hidden value="${item.id}" name="itemId" />
                         <button class="btn-remove">

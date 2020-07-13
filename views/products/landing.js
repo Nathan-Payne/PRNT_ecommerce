@@ -11,7 +11,7 @@ module.exports = () => {
 
             <section id="feature-section">
                 <div class="feature-image">
-                    <img src="/images/home_feature_img.jpg" alt="Feature Image">
+
                 </div>
                 <div class="feature-title">
                     <h1 class="hero-text">CATALOG</h1>

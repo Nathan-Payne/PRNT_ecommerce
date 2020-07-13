@@ -12,39 +12,50 @@ module.exports = ({ content }) => {
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
+    <main>
+        <header>
+            <nav class="navbar">
 
-            <div class="ham-container">
-                <input type="checkbox" id="nav-toggle">
-                <label for="nav-toggle" class="hamburger-menu">
-                    <div class="menu-lines">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
-                </label>
-            </div>
+                <div class="ham-container">
+                    <input type="checkbox" id="nav-toggle">
+                    <label for="nav-toggle" class="hamburger-menu">
+                        <div class="menu-lines">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                    </label>
+                    <ul class="nav-items">
+                        <li class="nav-item"><a href="/products">Products</a></li>
+                        <li class="nav-item"><a href="/products">Products</a></li>
+                        <li class="nav-item"><a href="/products">Products</a></li>
+                        <li class="nav-item"><a href="/products">Products</a></li>
+                        <li class="nav-item"><a href="/products">Products</a></li>
+                        <li class="nav-item"><a href="/products">Products</a></li>
+                        <li class="nav-item"><a href="/products">Products</a></li>
+                        <li class="nav-item"><a href="/products">Products</a></li>
+                    </ul>
+                </div>
 
-            <div class="logo-container">
-                <a href="/">
-                    <h2 class="logo">PRNT</h2>
-                </a>
-            </div>
+                <div class="logo-container">
+                    <a href="/">
+                        <h2 class="logo">PRNT</h2>
+                    </a>
+                </div>
 
-            <div class="cart-icon">
-                <a href="/cart"><i class="fa fa-shopping-cart"></i></a>
-            </div>
+                <div class="cart-icon">
+                    <a href="/cart"><i class="fa fa-shopping-cart"></i></a>
+                </div>
 
-        </nav>
-    </header>
+            </nav>
+        </header>
 
-    <hr>
+        <hr>
 
-    ${content}
-    
-    <hr>
-
+        ${content}
+        
+        <hr>
+    </main>
 </body>
 
 </html>
