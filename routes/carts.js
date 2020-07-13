@@ -28,7 +28,7 @@ router.post('/cart/products', async (req, res) => {
 	});
 
 	if (req.body.addCart) {
-		res.redirect(`/products/`);
+		return res.redirect(`/products`);
 	}
 	res.redirect(`/cart`);
 });

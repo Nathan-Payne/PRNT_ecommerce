@@ -670,6 +670,27 @@ table tbody tr:hover .btn-remove {
 		margin: 0 20vw;
 		border-top: 1px solid rgba(0, 0, 0, 0.1);
 	}
+
+	#order-product-section {
+		grid-row: 2/3;
+		grid-column: 2/3;
+		margin: 0;
+		padding: 1rem;
+	}
+	#product-image {
+		grid-row: 1/4;
+	}
+	.product-image {
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+	}
+	.product-image img {
+		height: auto;
+	}
+	.product-info {
+		margin-bottom: 4rem;
+	}
 }
 
 @media (min-width: 1440px) {
