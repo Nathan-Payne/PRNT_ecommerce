@@ -67,18 +67,46 @@ hr {
 	transition: 200ms all ease-in-out;
 }
 #nav-toggle {
-	display: none;
+	position: absolute;
+	opacity: 0;
 }
 .nav-items {
 	display: none;
+	transition: 300ms all ease-in-out 200ms;
+}
+#nav-toggle:checked ~ .nav-items {
+	display: block;
+	position: absolute;
+	top: 12vh;
+	left: 20px;
+	width: 40vw;
+	height: 100vh;
+	background: rgba(233, 233, 233, 1);
+	z-index: 2;
+	padding: 1rem;
+	border-right: 1px solid rgba(0, 0, 0, 0.1);
+	transition: 300ms all ease-in-out 200ms;
 }
 .nav-item {
 	text-decoration: none;
 	list-style: none;
 }
+.nav-item:nth-of-type(3n + 0) {
+	margin-bottom: 1rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 .nav-item a {
 	text-decoration: none;
 	color: rgba(0, 0, 0, 0.8);
+	padding-left: 5px;
+}
+.nav-item a:hover {
+	border-left: 1px solid rgba(0, 0, 0, 0.8);
+	padding-left: 4px;
+}
+.nav-item span {
+	font-weight: bold;
+	font-size: 1.2rem;
 }
 
 .logo-container a {
@@ -151,14 +179,10 @@ hr {
 	background-position: -90px 0px;
 	opacity: 0.8;
 }
-/* .feature-image img {
-	position: relative;
-	left: -7rem;
-} */
 .feature-title {
 	position: absolute;
 	right: 10px;
-	top: 47%;
+	top: 42%;
 }
 .hero-text {
 	font-weight: bold;
@@ -506,19 +530,12 @@ table tbody tr:hover .btn-remove {
 	.nav-item {
 		text-align: left;
 	}
-	.nav-item a {
-		padding-left: 5px;
-	}
-	.nav-item a:hover {
-		border-left: 1px solid rgba(0, 0, 0, 0.8);
-		padding-left: 4px;
-	}
-	.nav-item span {
-		font-weight: bold;
-		font-size: 1.2rem;
-	}
 	.nav-item:nth-last-of-type(1) {
 		grid-row: -1/-2;
+	}
+	.nav-item:nth-of-type(3n + 0) {
+		margin-bottom: 0rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.0);
 	}
 
 	.banner {
