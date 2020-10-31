@@ -49,7 +49,7 @@ module.exports = ({ content }) => {
 
             </nav>
         </header>
-
+        
         <hr>
 
         ${content}

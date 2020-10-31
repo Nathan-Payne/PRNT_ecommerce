@@ -26,7 +26,17 @@ module.exports = ({ items }) => {
 		.join('');
 
 	return layout({
-		content: `
+    content: `
+      <section id="feature-section-small">
+          <div class="feature-image-small"></div>
+          <div class="feature-title">
+              <h5 class="hero-text hero-small">FREE CATALOG 2020</h5>
+          </div>
+          <a href="/products">
+              <button class="btn-outline-tr feature-button-small">CLICK HERE</button>
+          </a>
+      </section>
+
       <section id="cart-container">
           <table>
               <thead>
